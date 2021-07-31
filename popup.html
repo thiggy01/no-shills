@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="header"></div>
+      <div class="options">
+        <div id="text-1">
+          Hide tweets with more than
+        </div>
+        <div id="quantity-1">
+          <input type="number" id="hashtags" value="3" min="1" max="9" />
+          <label for="hashtags">hash tags</label>
+        </div>
+        <div id="quantity-2">
+          <input type="number" id="cashtags" value="3" min="1" max="9" />
+          <label for="cashtags">cash tags</label>
+        <div>
+      </div>
+      <div id="footer">
+        <div id="text-2">
+          Shills Removed &#187; <span id="hidden-tweets"></span>
+        </div>
+      </div>
+      <div class="status"></div>
+    </div>
+  </body>
+</html>
