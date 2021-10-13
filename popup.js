@@ -33,7 +33,11 @@ ready(function() {
     })
   }
   chrome.storage.local.get('tweetsHidden', function (data) {
-    document.querySelector('#hidden-tweets').innerHTML = data.tweetsHidden
+    if (data.tweetsHidden === undefined ) {
+      document.querySelector('#hidden-tweets').innerHTML = 0
+    } else {
+      document.querySelector('#hidden-tweets').innerHTML = data.tweetsHidden
+    }
   })
 })
 
