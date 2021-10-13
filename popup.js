@@ -7,28 +7,28 @@ function ready(script) {
 }
 
 ready(function() {
-  let inputs = document.querySelectorAll('#hashtags, #cashtags')
-  let hashtags = inputs[0]
-  let cashtags = inputs[1]
+  let inputs = document.querySelectorAll('#cashtags, #hashtags')
+  let cashtags = inputs[0]
+  let hashtags = inputs[1]
   chrome.storage.local.get([
-    'hashAllowed', 'cashAllowed'
+    'cashAllowed', 'hashAllowed'
   ], function(data) {
     if (Object.keys(data).length === 0) {
       chrome.storage.local.set({
-        'hashAllowed': hashtags.value,
-        'cashAllowed': cashtags.value
+        'cashAllowed': cashtags.value,
+        'hashAllowed': hashtags.value
       })
     } else {
-      hashtags.value = data['hashAllowed']
       cashtags.value = data['cashAllowed']
+      hashtags.value = data['hashAllowed']
     }
   })
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('change', function() {
-      if (inputs[i] === hashtags) {
-        chrome.storage.local.set({ 'hashAllowed': hashtags.value })
-      } else if (inputs[i] === cashtags) {
+      if (inputs[i] === cashtags) {
         chrome.storage.local.set({ 'cashAllowed': cashtags.value })
+      } else if (inputs[i] === hashtags) {
+        chrome.storage.local.set({ 'hashAllowed': hashtags.value })
       }
     })
   }

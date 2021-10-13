@@ -10,7 +10,12 @@
   	"matches": ["https://twitter.com/*"],
     "js": ["content.js"]
   }],
+  "icons": {
+  	"48": "noshills_48.png",
+  	"128": "noshills_128.png"
+  },
   "action": {
+    "default_icon": "noshills_48.png",
     "default_popup": "popup.html"
   },
   "permissions": [ "storage", "tabs", "scripting" ],

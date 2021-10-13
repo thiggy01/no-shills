@@ -2,31 +2,31 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="popup.css">
     <script src="popup.js"></script>
   </head>
   <body>
-    <div id="wrapper">
-      <div class="header"></div>
-      <div class="options">
-        <div id="text-1">
-          Hide tweets with more than
-        </div>
-        <div id="quantity-1">
-          <input type="number" id="hashtags" value="3" min="1" max="9" />
-          <label for="hashtags">hash tags</label>
-        </div>
-        <div id="quantity-2">
-          <input type="number" id="cashtags" value="3" min="1" max="9" />
-          <label for="cashtags">cash tags</label>
-        <div>
+    <header class="box">
+      <img src="noshills_128.png" id="logo_image">
+      <h3 id="logo_text">No Shills</h3>
+    </header>
+    <main class="box separator">
+      <p id="text-1">Hide tweets with more than:</p>
+      <div id="input-1">
+        <input type="number" id="cashtags" value="3" min="0" max="9" />
+        <label for="cashtags"><span id="cash">$</span></label>
       </div>
-      <div id="footer">
-        <div id="text-2">
-          Shills Removed &#187; <span id="hidden-tweets"></span>
-        </div>
-      </div>
-      <div class="status"></div>
-    </div>
+      <p id="text-2">or more than:</p>
+      <div id="input-2">
+        <input type="number" id="hashtags" value="3" min="0" max="9" />
+        <label for="hashtags"><span id="hash">#</span></label>
+      <div>
+    </main>
+    <section id="status" class="box separator">
+      <p id="text-3">
+        Shills removed &#187; <span id="hidden-tweets"></span>
+      </p>
+    </section>
   </body>
 </html>

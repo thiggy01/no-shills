@@ -1,3 +1,60 @@
-#wrapper {
-    width: 160px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid pink; */
 }
+
+body {
+    width: 235px;
+    font: 600 15px/22px sans-serif;
+    color: #475268;
+    background: #f5f5f5;
+}
+
+.box {
+    padding: 5px 15px;
+}
+
+.separator {
+    border-top: 1px solid #e6e6e6;
+}
+
+header {
+    display: flex;
+    background: #e8f4ff;
+}
+
+    #logo_image {
+        height: 20px; width: 20px;
+    }
+
+    #logo_text {
+        margin: 0;
+        padding-left: 10px;
+    }
+
+main {
+    margin-bottom: 5px;
+}
+
+    #cash, #hash {
+        color: #4169e1;
+    }
+
+    #hash {
+        font-weight: 1000;
+    }
+
+    #text-3{
+        text-align: right;
+    }
+
+#status {
+    background: #e4e8ed;
+}
+
+#hidden-tweets {
+    color: #dc143c;
+}
+
