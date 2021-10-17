@@ -1,8 +1,11 @@
 {
   "name": "No Shills",
-  "description": "Hides spammed tweets from your search timeline, making your research cleaner and more relevant.",
+  "description": "",
   "version": "1.0",
   "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [{
     "js": ["content.js"],
   	"matches": ["https://twitter.com/*"]

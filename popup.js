@@ -9,10 +9,7 @@ function ready(script) {
 ready(function() {
   let inputs = document.querySelectorAll('#cashtags, #hashtags')
   let cashtags = inputs[0], hashtags = inputs[1]
-  chrome.storage.local.set({
-    'cashAllowed': cashtags.value,
-    'hashAllowed': hashtags.value
-  })
+
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('change', function() {
       if (inputs[i] === cashtags) {
@@ -22,6 +19,7 @@ ready(function() {
       }
     })
   }
+
   chrome.storage.local.get('tweetsHidden', function (data) {
     if (data.tweetsHidden === undefined ) {
       document.querySelector('#hidden-tweets').innerHTML = 0

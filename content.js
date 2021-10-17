@@ -7,8 +7,6 @@ chrome.storage.local.get(['hashAllowed', 'cashAllowed'], function (data) {
 })
 
 function checkTweets() {
-  console.log(hashAllowed)
-  console.log(cashAllowed)
   let tweetsList = document.querySelectorAll(
     'div[aria-label="Timeline: Search timeline"] article:not([hidden])')
   for (let i = 0; i < tweetsList.length; i++) {
