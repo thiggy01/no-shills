@@ -20,20 +20,6 @@ body {
     border-top: 1px solid #e6e6e6;
 }
 
-header {
-    display: flex;
-    background: #e8f4ff;
-}
-
-    #logo_image {
-        height: 20px; width: 20px;
-    }
-
-    #logo_text {
-        margin: 0;
-        padding-left: 10px;
-    }
-
 main {
     margin-bottom: 5px;
 }
