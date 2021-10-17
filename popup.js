@@ -1,5 +1,5 @@
 function ready(script) {
-  if (document.readyState != 'loading'){
+  if (document.readyState != 'loading') {
     script();
   } else {
     document.addEventListener('DOMContentLoaded', script);
@@ -8,21 +8,16 @@ function ready(script) {
 
 ready(function() {
   let inputs = document.querySelectorAll('#cashtags, #hashtags')
-  let cashtags = inputs[0]
-  let hashtags = inputs[1]
-  chrome.storage.local.get([
-    'cashAllowed', 'hashAllowed'
-  ], function(data) {
-    if (Object.keys(data).length === 0) {
-      chrome.storage.local.set({
-        'cashAllowed': cashtags.value,
-        'hashAllowed': hashtags.value
-      })
-    } else {
-      cashtags.value = data['cashAllowed']
-      hashtags.value = data['hashAllowed']
-    }
+  let cashtags = inputs[0], hashtags = inputs[1]
+
+  chrome.storage.local.set({
+    'cashAllowed': cashtags.value,
+    'hashAllowed': hashtags.value
   })
+  chrome.storage.local.get([ 'cashAllowed', 'hashAllowed' ], function (data) {
+    console.log(data)
+  })
+
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('change', function() {
       if (inputs[i] === cashtags) {
@@ -32,6 +27,7 @@ ready(function() {
       }
     })
   }
+
   chrome.storage.local.get('tweetsHidden', function (data) {
     if (data.tweetsHidden === undefined ) {
       document.querySelector('#hidden-tweets').innerHTML = 0

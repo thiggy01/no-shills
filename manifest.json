@@ -4,8 +4,8 @@
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [{
-  	"matches": ["https://twitter.com/*"],
-    "js": ["content.js"]
+    "js": ["content.js"],
+  	"matches": ["https://twitter.com/*"]
   }],
   "icons": {
   	"48": "noshills_48.png",
@@ -15,6 +15,6 @@
     "default_icon": "noshills_48.png",
     "default_popup": "popup.html"
   },
-  "permissions": [ "storage", "tabs", "scripting" ],
+  "permissions": [ "storage" ],
   "host_permissions": [ "https://twitter.com/*" ]
 }
