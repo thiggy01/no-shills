@@ -1,6 +1,6 @@
 {
   "name": "No Shills",
-  "description": "",
+  "description": "Hides spammed tweets from your search timeline, making your research cleaner and more relevant.",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
