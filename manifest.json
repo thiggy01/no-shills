@@ -18,6 +18,6 @@
     "default_icon": "noshills_48.png",
     "default_popup": "popup.html"
   },
-  "permissions": [ "storage" ],
+  "permissions": [ "storage", "tabs" ],
   "host_permissions": [ "https://twitter.com/*" ]
 }
